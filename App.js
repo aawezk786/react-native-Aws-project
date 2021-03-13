@@ -9,9 +9,10 @@
 import React from 'react';
 import {
   View,
-  Text
+  Text,
+  Button
 } from 'react-native';
-
+import Login from './components/Login';
 // import {
 //   Header,
 //   LearnMoreLinks,
@@ -20,13 +21,26 @@ import {
 //   ReloadInstructions,
 // } from 'react-native/Libraries/NewAppScreen';
 
-const App = () => {
+// const App = () => {
+//     return (
+//       <View>
+//      {/* <Text>Hello React Native</Text> */}
+//      <Login></Login>
+//       </View>
+//     );
+//  };
+class App extends React.Component{
+ 
+  render(){
+    const Data = "some data";
+    const obj = {id:1}
     return (
       <View>
-     <Text>Hello React Native</Text>
+        <Login data={Data} obj={obj}></Login>
       </View>
-    );
- };
+    )
+  }
+}
 
 
 
