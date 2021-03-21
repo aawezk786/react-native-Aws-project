@@ -52,8 +52,26 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator mode="modal">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="CreatePost" component={CreatePostScreen} />
+      <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            title: 'Home',
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTintColor: '#fff',
+          }}
+        />
+        <Stack.Screen name="CreatePost"
+        options={{
+          title: 'CreatePost',
+          headerStyle: {
+            backgroundColor: '#f4511e',
+          },
+          headerTintColor: '#fff',
+        }}
+        component={CreatePostScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
